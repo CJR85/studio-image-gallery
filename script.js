@@ -11,5 +11,8 @@ const images = new Array(
 for (let i = 0; i < btn.length; i++) {
   btn[i].onclick = function () {
     gallery.src = images[i];
+    let current = document.getElementsByClassName('active');
+    current[0].className = current[0].className.replace('active', '');
+    this.className += ' active';
   };
 }
